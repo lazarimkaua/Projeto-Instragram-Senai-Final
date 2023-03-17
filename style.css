@@ -1,0 +1,286 @@
+:root {
+    --cor-primaria-success: rgb(75, 200, 138);
+    --cor-hover-success: rgb(116, 158, 137);
+    --cor-secundaria-success: rgb(27, 66, 50);
+    
+    --cor-primaria-info: rgb(61, 157, 246);
+    --cor-hover-info: rgb(116, 134, 158);
+    --cor-secundaria-info: rgb(31, 62, 88);
+
+    --cor-primaria-danger: rgb(200, 75, 75);
+    --cor-hover-danger: rgb(158, 116, 116);
+    --cor-secundaria-danger: rgb(58, 22, 22);
+}
+
+.btn {
+    border: none;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background .3s;
+    border-radius: 5px;
+}
+
+/*HOME*/
+.btn-home {
+    background-color: var(--cor-primaria-success);
+    outline: none;
+    color: var(--cor-secundaria-success)
+}
+
+.btn-home:hover {
+    background-color: var(--cor-hover-success);
+}
+
+.btn-home:active {
+    color:var(--cor-primaria-success);
+    background-color: var(--cor-secundaria-success);
+}
+
+/*PERFIL*/
+.btn-perfil {
+    background-color: var(--cor-primaria-info);
+    outline: none;
+    color: var(--cor-secundaria-info)
+}
+
+.btn-perfil:hover {
+    background-color: var(--cor-hover-info);
+}
+
+.btn-perfil:active {
+    color:var(--cor-primaria-info);
+    background-color: var(--cor-secundaria-info);
+}
+
+/*CONFIG*/
+.btn-config {
+    background-color: var(--cor-primaria-danger);
+    outline: none;
+    color: var(--cor-secundaria-danger)
+}
+
+.btn-config:hover {
+    background-color: var(--cor-hover-danger);
+}
+
+.btn-config:active {
+    color:var(--cor-primaria-danger);
+    background-color: var(--cor-secundaria-danger);
+}
+
+
+
+
+
+
+
+
+.header {
+  
+    background-color: #fff;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    top:0;
+    left:0;  
+    width: 100%;
+    z-index:1;
+    float:left; 
+  
+  }
+  
+  .header ul {
+    
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+  
+  }
+  
+  .header li a {
+  
+    display: block;
+    padding: 0.7em 0.5em;
+    text-decoration: none;
+    transition:.3s;
+    border-bottom: 1px #f7f7f7 solid;
+    color:#242424;  
+  
+  }
+  
+  .header li a:hover,
+  .header .btn-mobile:hover {
+  
+    background-color: #ff0000dc;
+    color:#fff; 
+  
+  }
+  
+  .header .logo {
+   
+    display: block;
+    float: left;
+  
+  }
+  
+  
+  .header .nav {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+  }
+  
+  /* menu icon */
+  
+  .header .mobile-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+  
+  .header .mobile-icon .hamburguer {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+  
+  .header .mobile-icon .hamburguer:before,
+  .header .mobile-icon .hamburguer:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  .header .mobile-icon .hamburguer:before {
+    top: 5px;
+  }
+  
+  .header .mobile-icon .hamburguer:after {
+    top: -5px;
+  }
+  
+  /* menu btn */
+  
+  .header .mobile-btn {
+    display: none;
+  }
+  
+  .header .mobile-btn:checked ~ .nav {
+    max-height: 240px;
+  }
+  
+  .header .mobile-btn:checked ~ .mobile-icon .hamburguer {
+    background: transparent;
+  }
+  
+  .header .mobile-btn:checked ~ .mobile-icon .hamburguer:before {
+    transform: rotate(-45deg);
+  }
+  
+  .header .mobile-btn:checked ~ .mobile-icon .hamburguer:after {
+    transform: rotate(45deg);
+  }
+  
+  .header .mobile-btn:checked ~ .mobile-icon:not(.steps) .hamburguer:before,
+  .header .mobile-btn:checked ~ .mobile-icon:not(.steps) .hamburguer:after {
+    top: 0;
+  }
+  
+  .container {
+  
+    width:100%;
+    float:left;
+    margin-top:100px;    
+  
+  }
+  
+  .content { 
+  
+    float:left; 
+    width:92%; 
+    margin:0 4%;  
+   
+  }
+  
+  
+  /* 48em = 768px */
+  
+  @media (min-width: 48em) {
+    
+    .header li { float:left; }
+    
+    .header li a {
+      
+      padding: 15px 30px;
+      margin-top: 10px;
+      border-radius: 6px;
+    
+    }
+  
+    .header .nav {
+      clear: none;
+      float: right;
+      max-height: none;
+    }
+    
+    .header .mobile-icon { display:none; }
+  
+    .header li a {
+    
+      transition:.3s;
+      border-bottom:0; 
+    
+    }
+  
+  }
+
+
+
+
+
+
+
+ footer {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 252, 247) ;
+    color: black;
+    box-sizing: border-box;
+}
+
+
+
+
+
+.post{
+    background-color: rgb(255, 253, 249);
+    border: 1px #242424;
+    margin: 20px auto;
+    padding: 30px;
+    width: 600px;
+    box-shadow: -5px -10px 30px rgb(69, 60, 60), 6px 9px 15px rgb(69, 60, 60);
+    -webkit-box-shadow: -5px -10px 30px rgb(69, 60, 60), 6px 9px 15px rgb(69, 60, 60);
+    -moz-box-shadow: -5px -10px 30px rgb(69, 60, 60), 6px 9px 15px rgb(69, 60, 60);
+}
+
+.post-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}

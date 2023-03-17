@@ -1,1 +1,2 @@
-# Projeto-Instragram-Senai-Final
+# Projeto-Instagram-Senai
+Projeto Instagram feito durante as aulas de Html + CSS
